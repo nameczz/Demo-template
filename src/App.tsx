@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import QueryProvider from "./contexts/QueryContext";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-
+import Home from "./pages/home";
 const App: React.FC = () => {
   const isMobile = !useMediaQuery("(min-width:1000px)");
 
@@ -23,7 +23,9 @@ const App: React.FC = () => {
 
   return (
     <QueryProvider>
-      <div className={classes.root}>Demo page</div>
+      <div className={classes.root}>
+        <Home></Home>
+      </div>
     </QueryProvider>
   );
 };
